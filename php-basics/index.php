@@ -9,7 +9,7 @@
     body {
       display: grid;
       place-items: center;
-      height: 100vh;
+      /* height: 100vh; */
       margin: 0;
       font-family: sans-serif;
     }
@@ -17,21 +17,34 @@
 </head>
 
 <body>
+  <h1>Recommended Books</h1>
+
   <?php
-  $name = "Dark Matter";
-  $read = 0;
-
-
-  if ($read) {
-    $message = "You have read \"{$name}\" by Blake Crouch";
-  } else {
-    $message = "You have NOT read \"{$name}\" by Blake Crouch";
-  }
+  $books = [
+    [
+      "name" => "The Great Gatsby",
+      "author" => "F. Scott Fitzgerald",
+    ],
+    [
+      "name" => "1984",
+      "author" => "George Orwell",
+    ],
+    [
+      "name" => "To Kill a Mockingbird",
+      "author" => "Harper Lee",
+    ],
+  ];
   ?>
 
-  <h1>
-    <?= $message; ?>
-  </h1>
+
+  <ul>
+    <?php foreach ($books as $book) : ?>
+      <li><?= $book["name"]; ?> </li>
+      <br>
+      <li><?= $book["author"]; ?></li>
+    <?php endforeach; ?>
+  </ul>
+
 </body>
 
 </html>
