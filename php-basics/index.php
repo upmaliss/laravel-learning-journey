@@ -39,9 +39,7 @@
 
   <ul>
     <?php foreach ($books as $book) : ?>
-      <li><?= $book["name"]; ?> </li>
-      <br>
-      <li><?= $book["author"]; ?></li>
+      <?= $book["name"]; ?><br><?= $book["author"]; ?><br></li><br>
     <?php endforeach; ?>
   </ul>
 
